@@ -1,0 +1,38 @@
+@use "./variable.scss" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 85%;
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 100%;
+  }
+}
+
+section {
+  padding: 6rem 2rem;
+
+  @include sm-md {
+    padding: 4rem 2rem;
+  }
+}
+
+.container {
+  max-width: 100vw;
+
+  @media only screen and (min-width: 1920px) {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,48 @@
+$background-color: #ffffff;
+$secondary-color: #fc4308;
+$title-color: #3e3232;
+$text-color: #000000;
+$grey-color: #f5f5f5;
+
+@mixin glass-effect {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin grid-colm-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@mixin grid-colm-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@mixin flex-colm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@mixin md-xl {
+  @media screen and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin sm-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin xs-sm {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
